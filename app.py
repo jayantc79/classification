@@ -15,8 +15,8 @@ if uploaded_file is not None:
     st.write("")
     st.write("Classifying a X Ray Image - Normal Vs Pneumothorax.........hold tight")
     label = teachable_machine_classification(image, 'weights_file.h5')
-    if label == 1:
-        st.write("This X ray looks like having pneumothorax.It has abnormal opacification.Needs further investigation by a Radiologist/Doctor.")
+    if label == 0:
+        st.write("Hooray!! This X ray looks like doesn't have pneumothorax.")
     else:
-        st.write("Hooray!! This X ray looks normal.This X ray depicts clear lungs without any areas of abnormal opacification in the image")
+        st.write("Oops!! This X ray looks like pneumothorax.")
 
