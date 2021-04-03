@@ -1,0 +1,2 @@
+0 0_Not_infected
+1 1_Infected
