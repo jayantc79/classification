@@ -8,7 +8,7 @@ st.text("Upload a X Ray to detect it is normal or has pneumonia")
 # file upload and handling logic
 uploaded_file = st.file_uploader("Choose a X Ray Image", type="jpeg")
 if uploaded_file is not None:
-    image = Image.open(uploaded_file).convert('RGB')
+    image = Image.open(uploaded_file)
 #image = Image.open(img_name).convert('RGB')
     st.image(image, caption='Uploaded a X Ray IMage.', use_column_width=True)
     st.write("")
