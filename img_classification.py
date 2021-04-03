@@ -10,7 +10,7 @@ def teachable_machine_classification(img, weights_file):
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
     image = img
     #image sizing
-    size = (224, 224)
+    size = (224, 224,3)
     image = ImageOps.fit(image, size, Image.ANTIALIAS)
 
     #turn the image into a numpy array
