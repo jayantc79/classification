@@ -9,8 +9,8 @@ st.text("Upload a X Ray to detect it is normal or has pneumothorax")
 # file upload and handling logic
 uploaded_file = st.file_uploader("Choose a X Ray Image", type=['jpeg', 'png', 'jpg'])
 if uploaded_file is not None:
-    # image = Image.open(uploaded_file)
     image = Image.open(uploaded_file).convert('RGB')
+    # image = Image.open(img_name).convert('RGB')
     st.image(image, caption='Uploaded a X Ray IMage.', use_column_width=True)
     st.write("")
     st.write("Classifying a X Ray Image - Normal Vs Pneumothorax.........hold tight")
